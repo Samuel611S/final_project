@@ -96,5 +96,5 @@ https://www.kaggle.com/datasets/sveta151/tiktok-popular-songs-2022
 
 1) Clone the repository:
 ```bash
-git https://github.com/Samuel611S/final_project.git
+git clone https://github.com/Samuel611S/final_project.git
 cd final_project
