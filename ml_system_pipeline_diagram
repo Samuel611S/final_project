@@ -1,0 +1,42 @@
+digraph ML_Pipeline {
+	fontsize=12 rankdir=TB
+	A [label="Dataset (CSV)
+TikTok_songs_2022.csv" shape=box]
+	B [label="Data Inspection
+& Cleaning" shape=box]
+	C [label="Feature Selection
+(12 numeric features)" shape=box]
+	D [label="Label Creation
+Trending = top 25%
+(75th percentile)" shape=box]
+	E [label="Train/Test Split
+Stratified 80/20
+random_state=42" shape=box]
+	F [label="Baseline Model
+Logistic Regression
++ StandardScaler" shape=box]
+	G [label="Advanced Model
+Random Forest
+(class_weight=balanced)" shape=box]
+	H [label="5-Fold Cross-Validation" shape=box]
+	I [label="Pipeline + GridSearchCV
+Hyperparameter Tuning" shape=box]
+	J [label="Calibration
+(CalibratedClassifierCV)" shape=box]
+	K [label="Evaluation
+ROC-AUC, PR-AUC, F1
+Confusion Matrix" shape=box]
+	L [label="Interpretability
+Permutation Importance" shape=box]
+	A -> B
+	B -> C
+	C -> D
+	D -> E
+	E -> F
+	E -> G
+	G -> H
+	G -> I
+	I -> J
+	J -> K
+	K -> L
+}
